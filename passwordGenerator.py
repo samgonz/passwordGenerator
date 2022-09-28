@@ -10,9 +10,9 @@ generatoredPassword = []
 passwordGenerated = ''
 
 welcomeMessage = 'Welcome to password generator.\n'
-numberOfLetters = int(input('How many Letters will you like in your password?'))
-numberOfSymbols = int(input('How many Symbols will you like in your password?'))
-numberOfNumbers = int(input('How many Numbers will you like in your password?'))
+numberOfLetters = int(input('How many Letters will you like in your password?\n'))
+numberOfSymbols = int(input('How many Symbols will you like in your password?\n'))
+numberOfNumbers = int(input('How many Numbers will you like in your password?\n'))
 passwordLength = numberOfLetters + numberOfNumbers + numberOfSymbols
 
 for i in range(1, passwordLength+1):
@@ -26,4 +26,4 @@ for i in range(1, passwordLength+1):
         generatoredPassword.append(random.choice(numbers))	
         numberOfNumbers -= 1
 random.shuffle(generatoredPassword)
-print(f'Your secure user generated password is,\n{passwordGenerated.join(generatoredPassword)}')
+print(f'\nYour secure user generated password is,\n{passwordGenerated.join(generatoredPassword)}')
